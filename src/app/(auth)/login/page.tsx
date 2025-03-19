@@ -14,19 +14,21 @@ import { ModeToggle } from "@/components/mode-toggle";
 
 export default function LoginPage() {
   return (
-    <div className="container flex h-screen w-screen flex-col items-center justify-center">
+    <>
       <div className="absolute right-4 top-4 md:right-8 md:top-8">
         <ModeToggle />
       </div>
-      <div className="mx-auto flex w-full flex-col justify-center space-y-6 sm:w-[350px]">
+      
+      <div className="mx-auto flex w-full flex-col justify-center space-y-6">
         <div className="flex flex-col space-y-2 text-center">
           <h1 className="text-2xl font-semibold tracking-tight">
-            Welcome to Kogase
+            Welcome Back
           </h1>
           <p className="text-sm text-muted-foreground">
             Sign in to your account to continue
           </p>
         </div>
+        
         <Card>
           <CardHeader>
             <CardTitle>Sign In</CardTitle>
@@ -42,7 +44,7 @@ export default function LoginPage() {
               <span>Don&apos;t have an account? </span>
               <Link
                 href="/register"
-                className="underline underline-offset-4 hover:text-primary"
+                className="font-medium text-primary underline underline-offset-4 hover:text-primary/80"
               >
                 Sign up
               </Link>
@@ -50,6 +52,6 @@ export default function LoginPage() {
           </CardFooter>
         </Card>
       </div>
-    </div>
+    </>
   );
 }
